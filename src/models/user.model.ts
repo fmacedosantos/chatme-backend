@@ -6,10 +6,19 @@ export class User {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ unique: true })
+  @Column({ 
+    type: 'varchar',
+    nullable: false,
+    unique: true,
+    length: 255 
+  })
   username: string;
 
-  @Column()
+  @Column({ 
+    type: 'varchar',
+    nullable: false,
+    length: 255,
+  })
   password: string;
 
   @BeforeInsert()
