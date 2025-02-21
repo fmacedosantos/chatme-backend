@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './models/user.model';
 import { Message } from './models/message.model';
 import { MessageModule } from './modules/message.module';
+import { AuthModule } from './modules/auth.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -19,6 +20,7 @@ import { MessageModule } from './modules/message.module';
     }),
     UserModule,
     MessageModule,
+    AuthModule,
   ],
 })
 export class AppModule {}
