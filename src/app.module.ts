@@ -4,6 +4,7 @@ import { UserModule } from './modules/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './models/user.model';
 import { Message } from './models/message.model';
+import { MessageModule } from './modules/message.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -17,6 +18,7 @@ import { Message } from './models/message.model';
       synchronize: true, 
     }),
     UserModule,
+    MessageModule,
   ],
 })
 export class AppModule {}
